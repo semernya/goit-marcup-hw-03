@@ -30,7 +30,6 @@ button {
 
 a {
     text-decoration: none;
-    display: inline-block;
 }
 
 ul {
@@ -354,7 +353,6 @@ img {
 }
 
 .footer-logo {
-    display: inline-block;
     font-family: 'Raleway', sans-serif;
     color: #4D5AE5;
     font-weight: 700;
@@ -363,6 +361,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     margin-bottom: 16px;
+    display: inline-block;
 }
 
 .footer-accent {
