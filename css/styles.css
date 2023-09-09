@@ -13,7 +13,13 @@ body {
     background-color: #fff;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
     width: auto;
 }
@@ -38,25 +44,25 @@ li {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .container {
-    max-width: 1128px;
-    margin-left: 156px;
-    margin-right: 156px;
-    flex-shrink: 0;
-}
-
-.header-inner {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .header-nav {
     display: flex;
-    gap: 24px;
     flex-grow: 1;
+    align-items: center;
 }
 
 .logo {
@@ -68,7 +74,9 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     padding: 24px 0;
+    margin-right: 76px;
 }
+
 .accent {
     color: #2E2F42;
     font-weight: 700;
@@ -79,7 +87,6 @@ img {
     display: flex;
     gap: 40px;
     flex-grow: 1;
-    justify-content: center;
 }
 
 .nav-item {
@@ -124,17 +131,17 @@ img {
 
 /*hero section*/
 
-.hero-inner {
-    padding: 188px 0 188px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 120px;
-}
-
-.hero {
+.hero-sec {
     background-color: #2E2F42;
     color: #fff;
+    padding: 188px 0;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
 }
 
 .hero-title {
@@ -144,9 +151,11 @@ img {
     text-align: center;
     margin-bottom: 48px;
     max-width: 496px;
+    text-align: center;
 }
 
 .button {
+    display: block;
     background-color: #4D5AE5;
     color: #fff;
     font-weight: 500;
@@ -157,6 +166,9 @@ img {
     cursor: pointer;
     border-radius: 4px;
     padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    border: none;
 }
 
 .button:hover,
@@ -164,14 +176,24 @@ img {
 .button:focus {
     background-color: #404BBF;
 }
+
 /*about section*/
 
-.about-inner {
-    margin-bottom: 120px;
+.about-sec {
+    padding: 120px 0;
 }
 
-.about-main-title {
-    text-align: center;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .about-list {
@@ -180,7 +202,7 @@ img {
 }
 
 .about-item {
-    width: calc((100% - 72px) / 3);
+    width: calc((100% - 72px) / 4);
 }
 
 .about-title {
@@ -204,7 +226,13 @@ img {
 
 .team-sec {
     background-color: #F4F4FD;
-    padding-top: 120px;
+    padding: 120px 0;
+}
+
+.team-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .team-title {
@@ -224,11 +252,12 @@ img {
 
 .member-card {
     background-color: #fff;
-    margin-bottom: 120px;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-member-info {
-    margin: 32px 0;
+    padding: 32px 0;
 }
 
 .team-member {
@@ -253,11 +282,13 @@ img {
 
 .portfolio-sec {
     background-color: #fff;
-    padding-top: 120px;
+    padding: 120px 0;
 }
 
 .portfolio-inner {
-    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .portfolio-title {
@@ -274,11 +305,14 @@ img {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
+    column-gap: 24px;
+        row-gap: 48px;
 }
 
 .portfolio-elem-info {
-    margin: 32px 0;
-    padding: 0 16px;
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
 }
 
 .portfolio-elem {
@@ -288,7 +322,7 @@ img {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    width: calc((100% - 48px) / 3 );
+    width: calc((100% - 48px) / 3);
     margin-bottom: 8px;
     width: auto;
 }
@@ -307,13 +341,11 @@ img {
 
 .footer {
     background-color: #2E2F42;
-} 
-
-.footer-inner {
-    padding: 102px 0 100px;
+    padding: 100px 0;
 }
 
 .footer-logo {
+    display: inline-block;
     font-family: 'Raleway', sans-serif;
     color: #4D5AE5;
     font-weight: 700;
@@ -321,14 +353,13 @@ img {
     text-transform: uppercase;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .footer-accent {
     color: #F4F4FD;
     font-weight: 700;
     letter-spacing: 0.03em;
-    margin-bottom: 18px;
 }
 
 .footer-text {
